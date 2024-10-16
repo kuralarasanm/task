@@ -6,13 +6,15 @@
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
+
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    background-color: rgb(7, 7, 112);
+    background-color: #0F4F79;
     padding: 10px 20px;
     color: aliceblue;
 }
@@ -20,6 +22,8 @@ body {
 .navbar-logo {
     display: flex;
     padding: 10px;
+    margin-left: 100px;
+    margin-bottom: 10px;
 }
 
 .logo-heading {
@@ -31,6 +35,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    margin-left: 10px;
+    position: relative;
+    left: 30px;
+}
+
+.navbar-list-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-right: 90px;
 }
 
 .navbar-list a {
@@ -39,18 +53,20 @@ body {
 }
 
 .navbar-list a:hover {
-    color: blue;
+    color: #0596B6;
 }
 
 .navbar-list li {
     padding: 10px;
     list-style-type: none;
+    font-size: 12px;
 }
 
 .navbar-list-end {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
 }
 
 .navbar-list-end li {
@@ -61,21 +77,21 @@ body {
 .navbar-list-end button {
     height: 40px;
     width: 100px;
-    border: 2px solid rgb(15, 15, 111);
+    border: 2px solid white;
     border-radius: 20px;
     background-color: white;
-    color: blue;
+    color: #90B8DE;
     cursor: pointer;
 }
 
 .navbar-list-end button:hover {
-    background-color: rgb(15, 15, 111);
+    background-color: #90B8DE;
     color: white;
     border: 2px solid white;
 }
 
 .menu-toggle {
-    display: block;
+    display: none;
     background: none;
     border: none;
     font-size: 2rem;
@@ -84,8 +100,25 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
     .navbar {
         flex-direction: column;
+    }
+
+    .navbar-logo {
+        align-self: start;
+        position: relative;
+        right: 5rem;
+    }
+
+    .navbar-list-center,
+    .navbar-list-end {
+        flex-direction: column;
+        align-items: start;
     }
 
     .navbar-list,
@@ -112,6 +145,7 @@ body {
 }
 
 @media (max-width: 576px) {
+
     .navbar-logo {
         padding: 5px;
     }
@@ -133,7 +167,7 @@ body {
 /* -----------------------navbar end----------------------------------------- */
 
 .home {
-    background-color: #3174bc79;
+    background-color: #F0F9FE;
 }
 
 .container {
@@ -161,7 +195,8 @@ body {
 }
 
 .heading-section .head-color {
-    color: #2515d3;
+    color: #104A69;
+    font-size: 38px;
 }
 
 .video-icon img {
@@ -181,7 +216,7 @@ body {
 }
 
 .offer b {
-    color: red;
+    color: #104A69;
     font-size: 40px;
 }
 
@@ -201,13 +236,22 @@ body {
 }
 
 .free-download {
-    background-color: #007bff;
+    background-color: #FA665C;
     border-radius: 100px;
 }
 
 .buy-now {
-    background-color: #28a745;
+    background-color: #0596B6;
     border-radius: 100px;
+    width: 110px;
+}
+
+.offer-percent {
+    width: 70px;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    position: relative;
+    right: 2.3rem;
 }
 
 .buy-now:hover,
@@ -231,10 +275,7 @@ body {
     gap: 10px;
 }
 
-.feature-item img {
-    width: 40px;
-    height: 40px;
-}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -252,15 +293,19 @@ body {
     }
 
     .button-section {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
+    }
+
+    .buy-now {
+        display: flex;
     }
 }
 
 @media (max-width: 576px) {
     .features-list {
         grid-template-columns: 1fr;
-        
+
     }
 
     .offer {
@@ -275,6 +320,55 @@ body {
     .btn {
         width: 100%;
     }
+
+    .buy-now {
+        display: flex;
+    }
+
+    .offer-percent {
+        padding: 0px 20px 0px 20px;
+        border-radius: 0px 30px 30px 0px;
+    }
+}
+
+.home-icon {
+    width: 30px;
+    /* Width of individual icon */
+    height: 30px;
+    /* Height of individual icon */
+    background-image: url('./images/otherlinks-sprite.png');
+    /* Path to sprite sheet */
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* To make the div behave like an image */
+    margin: 10px;
+    border: 2px solid #0F4F79;
+    border-radius: 100%;
+
+}
+
+.cloud-icon {
+    background-position: 5px 5px;
+    /* Home icon (top-left corner) */
+}
+
+.office-icon {
+    background-position: 6px -40px;
+    /* Search icon (below Home) */
+}
+
+.blue-icon {
+    background-position: 6px -92px;
+    /* Cart icon (right of Home) */
+}
+
+.file-icon {
+    background-position: 6px -17px;
+    /* User icon (below Cart) */
+}
+
+.redis-icon {
+    background-position: 6px -165px;
 }
 
 /* ------------------------------home end----------------------------------------------- */
@@ -305,12 +399,13 @@ body {
 .highlight-text {
     position: absolute;
     bottom: 30px;
-    left: 25rem;
-    color: rgb(56, 17, 199);
+    left: 26rem;
+    color: #104A69;
     /* background-color: rgba(0, 0, 0, 0.6); Transparent background for text */
     padding: 10px 15px;
     border-radius: 5px;
     line-height: 1.6;
+    font-size: 1.2rem;
 }
 
 .highlight-text p {
@@ -339,14 +434,14 @@ body {
 /* Style for the heading */
 .text-content h4 {
     font-size: 1.4rem;
-    color: #0d06c1;
+    color: #0596B6;
     margin-bottom: 20px;
 }
 
 /* Subheading styling */
 .text-content h3 {
     font-size: 1.8rem;
-    color: #9f1515;
+    color: #104A69;
     margin-bottom: 15px;
 }
 
@@ -419,7 +514,6 @@ body {
 
     .text-content-div {
         grid-template-columns: 1fr;
-        /* Always single column for mobile */
     }
 
     .text-content h3 {
@@ -471,7 +565,7 @@ body {
 
     position: absolute;
     bottom: 2px;
-    left: 15rem;
+    left: 10rem;
     /* color: rgb(56, 17, 199); */
     /* background-color: rgba(0, 0, 0, 0.6); Transparent background for text */
     padding: 10px 15px;
@@ -481,7 +575,7 @@ body {
 
 .section-content h1 {
     font-size: 2rem;
-    color: #0d06c1;
+    color: #0F4F79;
     margin-bottom: 10px;
 }
 
@@ -503,7 +597,7 @@ body {
 
 .get-started-btn {
     padding: 10px 20px;
-    background-color: #0d06c1;
+    background-color: #0596B6;
     color: white;
     border: none;
     border-radius: 100px;
@@ -543,6 +637,7 @@ body {
     .section-content li {
         font-size: 0.95rem;
         /* Adjust text size */
+
     }
 }
 
@@ -551,7 +646,7 @@ body {
     .responsive-section {
         flex-direction: column;
         /* Stack image and content vertically */
-        text-align: center;
+        text-align: start;
     }
 
     .section-content h1 {
@@ -588,28 +683,28 @@ body {
 
 
 footer {
-    background-color: #151517;
+    background-color: #20242F;
     /* Dark background */
     color: white;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: left;
 }
 
 .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* gap: 20px; */
 }
 
 .footer-col {
-    flex: 1;
+    display: inline;
     min-width: 200px;
     /* Minimum width for footer columns */
 }
 
 .footer-col h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
@@ -620,6 +715,8 @@ footer {
 
 .footer-col ul li {
     margin-bottom: 10px;
+    font-size: 10px;
+    color: #565964;
 }
 
 .footer-col p {
@@ -630,8 +727,7 @@ footer {
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column;
-        /* Stack footer columns vertically on small screens */
+        flex-direction: row;
         text-align: center;
     }
 
@@ -647,6 +743,13 @@ footer {
     .footer-col ul li {
         font-size: 0.95rem;
         /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
@@ -666,66 +769,111 @@ footer {
         /* Smaller paragraph font */
     }
 }
-/* 
-.links{
-    text-align: center;
-    height: 50px;
-    margin-top: 20px;
-}
-.links a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    font-weight: 400;
-}
-.links a:hover{
-    color: #0d06c1;
-    text-decoration-line: underline;
-} */
 
+/* ------------------------------- footer end --------------------------------------------- */
 .links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px; /* Add spacing between links */
-    margin-top: 20px;
+    /* gap: 15px; */
+    /* margin-top: 20px; */
     padding: 10px;
+    /* border: 2px solid red; */
 }
 
 .links a {
+    width: 150px;
     text-decoration: none;
     color: black;
     padding: 10px 20px;
     font-weight: 400;
     font-size: 1rem;
     transition: color 0.3s ease, text-decoration 0.3s ease;
+    /* border: 2px solid yellow; */
 }
 
 .links a:hover {
-    color: #0d06c1;
-    text-decoration-line: underline;
+    color: #0F4F79;
+    /* text-decoration-line: underline; */
+    border-bottom: 3px solid #104A69;
 }
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
     .links {
-        gap: 10px; /* Reduce gap for smaller screens */
+        gap: 10px;
+        /* Reduce gap for smaller screens */
     }
 
     .links a {
         padding: 8px 15px;
-        font-size: 0.95rem; /* Adjust font size for smaller screens */
+        font-size: 0.95rem;
+        /* Adjust font size for smaller screens */
     }
 }
 
 @media (max-width: 576px) {
     .links {
-        flex-direction: column; /* Stack links vertically on small screens */
-        align-items: center;
+        flex-direction: column;
+        align-items: start;
+        position: relative;
+        left: 10%;
     }
 
     .links a {
         padding: 10px;
-        font-size: 0.9rem; /* Smaller font for mobile */
+        font-size: 0.9rem;
+        /* Smaller font for mobile */
     }
+
+    .links a div {
+        padding-left: 10px;
+    }
+}
+
+.icon {
+    width: 10px;
+    /* Width of individual icon */
+    height: 30px;
+    /* Height of individual icon */
+    background-image: url('./images/product-icon-sprites.png');
+    /* Path to sprite sheet */
+    background-repeat: no-repeat;
+    display: inline-block;
+    /* To make the div behave like an image */
+    margin: 10px;
+    /* border: 2px solid green; */
+}
+
+/* Positioning each specific icon */
+.overview-icon {
+    background-position: 0 5px;
+}
+
+.features-icon {
+    background-position: 0 -26px;
+}
+
+.work-icon {
+    background-position: 0 -58px;
+}
+
+.manual-icon {
+    background-position: 0px -94px;
+}
+
+.faq-icon {
+    background-position: 0px -130px;
+}
+
+.video-icon {
+    background-position: 0px -166px;
+}
+
+.pricing-icon {
+    background-position: 0px -199px;
+}
+
+.screenshot-icon {
+    background-position: 0px -230px;
 }

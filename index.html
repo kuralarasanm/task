@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 
-<body>
+<body style="overflow-x: hidden;">
     <article>
         <nav class="navbar">
             <div class="navbar-logo">
@@ -16,13 +16,15 @@
                 <h1 class="logo-heading">LOGO HERE</h1>
             </div>
             <div class="navbar-list">
-                <li><a href="">Reseller</a></li>
-                <li><a href="">products</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Video Tutoriols</a></li>
-                <li><a href="">Free Tools</a></li>
-                <li><a href="">FAQ</a></li>
-                <li><a href="">knowlege Base</a></li>
+                <div class="navbar-list-center">
+                    <li><a href="">Reseller</a></li>
+                    <li><a href="">products</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Video Tutoriols</a></li>
+                    <li><a href="">Free Tools</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">knowlege Base</a></li>
+                </div>
                 <div class="navbar-list-end">
                     <li><a href="">pricing</a></li>
                     <li><a href="">Download</a></li>
@@ -58,59 +60,84 @@
                 <!-- Buttons Section -->
                 <div class="button-section">
                     <button class="btn free-download">Free Download</button>
-                    <button class="btn buy-now">Buy Now 75% Off</button>
+                    <button class="btn buy-now">Buy Now <button class="offer-percent"
+                            style="background-color: #C75A59; color: white"><b style="font-size: 20px;">75%</b> <br />
+                            Off</button></button>
                 </div>
 
                 <!-- Features List -->
                 <div class="features-list">
                     <div class="feature-item">
-                        <img src="./images/cloud.png" alt="Cloud" class="img-fluid" height="30px" width="30">
+                        <div class="home-icon cloud-icon" style="position: relative;right: 10px;"></div>
                         <p>Scelerisque eleifend</p>
                     </div>
                     <div class="feature-item">
-                        <img src="./images/folder.png" alt="Folder" class="img-fluid" height="30px" width="30">
+                        <div class="home-icon office-icon"></div>
+                        <p>Mathis nunc sed blandit</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="home-icon blue-icon"></div>
+                        <p>Mathis nunc sed blandit</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="home-icon file-icon"></div>
                         <p>Felis eget nunc lobortis</p>
                     </div>
                     <div class="feature-item">
-                        <img src="./images/office.png" alt="Office" class="img-fluid" height="30px" width="30">
-                        <p>Scelerisque eleifend</p>
-                    </div>
-                    <div class="feature-item">
-                        <img src="./images/file.png" alt="File" class="img-fluid" height="30px" width="30">
-                        <p>Mattis nunc</p>
-                    </div>
-                    <div class="feature-item">
-                        <img src="./images/folder.png" alt="Folder" class="img-fluid" height="30px" width="30">
+                        <div class="home-icon redis-icon"></div>
                         <p>Felis eget nunc lobortis</p>
                     </div>
                     <div class="feature-item">
-                        <img src="./images/office.png" alt="Office" class="img-fluid" height="30px" width="30">
+                        <div class="home-icon office-icon"></div>
                         <p>Felis eget nunc lobortis</p>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- <section>
+            <div class="home-icon cloud-icon"></div>
+            <div class="home-icon search-icon"></div>
+            <div class="home-icon blue-icon"></div>
+            <div class="home-icon file-icon"></div>
+            <div class="home-icon redis-icon"></div>
+        </section> -->
         <!-- ----------------------------home end-------------------------------------------- -->
-            <section class="links">
-                <a href="">Overview</a>
-                <a href="">Features</a>
-                <a href="">How it works</a>
-                <a href="">User Manual</a>
-                <a href="">FAQ</a>
-                <a href="">Videos</a>
-                <a href="">Pricing</a>
-                <a href="">Screen Shots</a>
+        <section class="links container">
+            <a href="" class="icon overview-icon" style="width: 100px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">Overview</div>
+            </a>
+            <a href="" class="icon features-icon" style="width: 100px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">Features</div>
+            </a>
+            <a href="" class="icon work-icon" style="width: 130px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">How it works</div>
+            </a>
+            <a href="" class="icon manual-icon" style="width: 130px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">User Manual</div>
+            </a>
+            <a href="" class="icon faq-icon" style="width: 80px;">
+                <div style="margin-left: 10px;width: 100px; position: absolute;border: 10px;">FAQ</div>
+            </a>
+            <a href="" class="icon video-icon" style="width: 90px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">Videos</div>
+            </a>
+            <a href="" class="icon pricing-icon" style="width: 100px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">Pricing</div>
+            </a>
+            <a href="" class="icon screenshot-icon" style="width: 130px;">
+                <div style="margin: 0px 0px 10px 7px; width: 100px; position: absolute;border: 10px;">Screen Shots</div>
+            </a>
 
-            </section>
-        <!-- ------------------------------------------------------------------------------------------- -->
+        </section>
+        <!-- ---------------------------------links end---------------------------------------------------------- -->
         <section class="accelerate-section">
             <div class="image-text-container">
                 <!-- Image and Highlighted Text -->
                 <img src="./images/accelerate_img.jpg" alt="Accelerate Image" class="img-fluid">
                 <div class="highlight-text">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores <br>eligendi aut impedi -
-                        <b>Now
-                            10x faster</b>
+                    <p style="color: #054d85;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores <br
+                            style="margin-left: 50px;">eligendi aut impedi - <b style="color: #5faeeb;">Now 10x
+                            faster</b>
                     </p>
                 </div>
             </div>
@@ -159,7 +186,7 @@
         <!-- ---------------------------------accelerate section end------------------------------------------------ -->
         <section class="responsive-section">
             <img src="./images/bg-how-does-office365-mailbox-work.jpg" alt="Background Image" class="section-image">
-            <div class="section-content">
+            <div class="section-content ">
                 <h1>Quisque egestas diam in arcu cursus euismod</h1>
                 <p>sed do eiusmod tempor incididunt ut labore et dolorex</p>
                 <ol>
@@ -200,19 +227,19 @@
                 </div>
                 <div class="footer-col">
                     <h3>company</h3>
-                    <p>Company Inc.<br>
+                    <p style="color: #565964;">Company Inc.<br>
                         Rehoboth Beach, DE<br>
                         United States<br>
                         +1 (302) 416-3056
                     </p>
                 </div>
             </div>
-            <hr>
+            <hr style="width: 80%; margin-left: 5rem;">
             <div>
-                <p style="text-align: center; margin-top: 10px;">privacy policy | terms of service | copyright | all rights reserved</p>
+                <p style="text-align: center; margin-top: 20px; font-size: 15px; color: #565964;">Privacy Policy | Terms
+                    of Use | GDRP | Security | Press Releases</p>
             </div>
         </footer>
-
 
     </article>
     <script src="./index.js"></script>
